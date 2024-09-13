@@ -1,0 +1,204 @@
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
+    QPushButton, QSizePolicy, QTextEdit, QWidget)
+import res_rc
+
+class Ui_Maim_window(object):
+    def setupUi(self, Maim_window):
+        if not Maim_window.objectName():
+            Maim_window.setObjectName(u»Maim_window»)
+        Maim_window.setEnabled(True)
+        Maim_window.resize(1284, 832)
+        Maim_window.setMinimumSize(QSize(1284, 832))
+        Maim_window.setMaximumSize(QSize(1284, 832))
+        font = QFont()
+        font.setPointSize(11)
+        Maim_window.setFont(font)
+        icon = QIcon()
+        icon.addFile(u»:/icons/icons/iubip.png», QSize(), QIcon.Normal, QIcon.Off)
+        Maim_window.setWindowIcon(icon)
+        Maim_window.setWindowOpacity(1.000000000000000)
+        Maim_window.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);»)
+        self.centralwidget = QWidget(Maim_window)
+        self.centralwidget.setObjectName(u»centralwidget»)
+        self.frame = QFrame(self.centralwidget)
+        self.frame.setObjectName(u»frame»)
+        self.frame.setGeometry(QRect(0, 0, 1284, 121))
+        self.frame.setAutoFillBackground(False)
+        self.frame.setStyleSheet(u»background–color:rgb(0, 0, 0)»)
+        self.name_pr = QLabel(self.frame)
+        self.name_pr.setObjectName(u»name_pr»)
+        self.name_pr.setGeometry(QRect(540, 10, 191, 91))
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.name_pr.sizePolicy().hasHeightForWidth())
+        self.name_pr.setSizePolicy(sizePolicy)
+        font1 = QFont()
+        font1.setPointSize(32)
+        font1.setBold(True)
+        font1.setHintingPreference(QFont.PreferDefaultHinting)
+        self.name_pr.setFont(font1)
+        self.name_pr.setAutoFillBackground(False)
+        self.name_pr.setStyleSheet(u»color:rgb(255, 255, 255)»)
+        self.name_pr.setTextFormat(Qt.TextFormat.AutoText)
+        self.name_pr.setScaledContents(False)
+        self.name_pr.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.name_pr.setWordWrap(False)
+        self.name_pr_of = QLabel(self.frame)
+        self.name_pr_of.setObjectName(u»name_pr_of»)
+        self.name_pr_of.setGeometry(QRect(770, 30, 471, 41))
+        font2 = QFont()
+        font2.setPointSize(14)
+        self.name_pr_of.setFont(font2)
+        self.name_pr_of.setStyleSheet(u»color:rgb(255, 255, 255)»)
+        self.name_pr_of.setTextFormat(Qt.TextFormat.AutoText)
+        self.name_pr_of.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frame_2 = QFrame(self.centralwidget)
+        self.frame_2.setObjectName(u»frame_2»)
+        self.frame_2.setGeometry(QRect(0, 721, 1284, 111))
+        self.frame_2.setAutoFillBackground(False)
+        self.frame_2.setStyleSheet(u»background–color:rgb(0, 0, 0)»)
+        self.frame_3 = QFrame(self.frame_2)
+        self.frame_3.setObjectName(u»frame_3»)
+        self.frame_3.setGeometry(QRect(–80, 10, 211, 101))
+        self.frame_3.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);\n»
+«border–radius: 50px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
+        self.ligo = QLabel(self.frame_3)
+        self.ligo.setObjectName(u»ligo»)
+        self.ligo.setGeometry(QRect(64, –4, 151, 110))
+        self.ligo.setStyleSheet(u»background–color: rgba(255, 255, 255, 0);\n»
+«border: 2px solid rgba(0, 0, 0, 0);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        self.ligo.setPixmap(QPixmap(u»:/icons/icons/iubip_hb.png»))
+        self.ligo.setScaledContents(True)
+        self.frame_4 = QFrame(self.frame_2)
+        self.frame_4.setObjectName(u»frame_4»)
+        self.frame_4.setGeometry(QRect(1150, 10, 211, 101))
+        self.frame_4.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);\n»
+«border–radius: 50px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
+        self.tg_Button = QPushButton(self.frame_4)
+        self.tg_Button.setObjectName(u»tg_Button»)
+        self.tg_Button.setGeometry(QRect(15, 24, 51, 51))
+        self.tg_Button.setCursor(QCursor(Qt.PointingHandCursor))
+        self.tg_Button.setStyleSheet(u»background–color: rgba(255, 255, 255,0);\n»
+«border: 2px solid rgba(0, 0, 0, 0);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        icon1 = QIcon()
+        icon1.addFile(u»:/icons/icons/1636144613–56–papik–.png», QSize(), QIcon.Normal, QIcon.Off)
+        self.tg_Button.setIcon(icon1)
+        self.tg_Button.setIconSize(QSize(60, 60))
+        self.vk_Button = QPushButton(self.frame_4)
+        self.vk_Button.setObjectName(u»vk_Button»)
+        self.vk_Button.setGeometry(QRect(74, 24, 51, 51))
+        self.vk_Button.setCursor(QCursor(Qt.PointingHandCursor))
+        self.vk_Button.setStyleSheet(u»background–color: rgba(255, 255, 255,0);\n»
+«border: 2px solid rgba(0, 0, 0, 0);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        icon2 = QIcon()
+        icon2.addFile(u»:/icons/icons/vkk_icon.png», QSize(), QIcon.Normal, QIcon.Off)
+        self.vk_Button.setIcon(icon2)
+        self.vk_Button.setIconSize(QSize(50, 50))
+        self.analyze_selection_button = QPushButton(self.centralwidget)
+        self.analyze_selection_button.setObjectName(u»analyze_selection_button»)
+        self.analyze_selection_button.setGeometry(QRect(749, 630, 111, 31))
+        self.analyze_selection_button.setFont(font)
+        self.analyze_selection_button.setCursor(QCursor(Qt.PointingHandCursor))
+        self.analyze_selection_button.setStyleSheet(u»background–color: rgba(0, 0, 0, 255);\n»
+«border: 1px solid rgba(255, 255, 255, 40);\n»
+«border–radius: 7px;\n»
+«color:rgba(255, 255, 255, 255);»)
+        self.text_entry = QTextEdit(self.centralwidget)
+        self.text_entry.setObjectName(u»text_entry»)
+        self.text_entry.setGeometry(QRect(60, 210, 801, 411))
+        self.text_entry.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);\n»
+«border: 2px solid rgba(0, 0, 0, 255);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        self.text_entry.setFrameShape(QFrame.Shape.StyledPanel)
+        self.result_text = QTextEdit(self.centralwidget)
+        self.result_text.setObjectName(u»result_text»)
+        self.result_text.setGeometry(QRect(900, 210, 321, 411))
+        self.result_text.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);\n»
+«border: 2px solid rgba(0, 0, 0, 255);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        self.analyze_tn_button = QPushButton(self.centralwidget)
+        self.analyze_tn_button.setObjectName(u»analyze_tn_button»)
+        self.analyze_tn_button.setGeometry(QRect(590, 630, 150, 31))
+        self.analyze_tn_button.setFont(font)
+        self.analyze_tn_button.setCursor(QCursor(Qt.PointingHandCursor))
+        self.analyze_tn_button.setStyleSheet(u»background–color: rgba(0, 0, 0, 255);\n»
+«border: 1px solid rgba(255, 255, 255, 40);\n»
+«border–radius: 7px;\n»
+«color:rgba(255, 255, 255, 255);»)
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u»label»)
+        self.label.setGeometry(QRect(70, 185, 121, 21))
+        font3 = QFont()
+        font3.setPointSize(12)
+        font3.setBold(True)
+        self.label.setFont(font3)
+        self.label.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u»label_2»)
+        self.label_2.setGeometry(QRect(910, 185, 81, 21))
+        self.label_2.setFont(font3)
+        self.label_2.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        self.voice_input_button = QPushButton(self.centralwidget)
+        self.voice_input_button.setObjectName(u»voice_input_button»)
+        self.voice_input_button.setGeometry(QRect(70, 628, 25, 25))
+        self.voice_input_button.setStyleSheet(u»background–color: rgba(255, 255, 255, 255);\n»
+«border–radius: 7px;\n»
+«color:rgba(0, 0, 0, 255);»)
+        icon3 = QIcon()
+        icon3.addFile(u»:/icons/icons/speech_to_text_48dp_FILL0_wght400_GRAD0_opsz48.png», QSize(), QIcon.Normal, QIcon.Off)
+        self.voice_input_button.setIcon(icon3)
+        self.voice_input_button.setIconSize(QSize(25, 25))
+        Maim_window.setCentralWidget(self.centralwidget)
+        self.frame_2.raise_()
+        self.result_text.raise_()
+        self.analyze_tn_button.raise_()
+        self.frame.raise_()
+        self.analyze_selection_button.raise_()
+        self.text_entry.raise_()
+        self.label.raise_()
+        self.label_2.raise_()
+        self.voice_input_button.raise_()
+
+        self.retranslateUi(Maim_window)
+
+        QMetaObject.connectSlotsByName(Maim_window)
+    # setupUi
+    def retranslateUi(self, Maim_window):
+        Maim_window.setWindowTitle(QCoreApplication.translate(«Maim_window», u»TextSAI», None))
+        self.name_pr.setText(QCoreApplication.translate(«Maim_window», u»TextSAI», None))
+        self.name_pr_of.setText(««)
+        self.ligo.setText(««)
+        self.tg_Button.setText(««)
+        self.vk_Button.setText(««)
+        self.analyze_selection_button.setText(QCoreApplication.translate(«Maim_window», u»\u0412\u044b\u0431\u043e\u0440\u043a\u0430», None))
+        self.analyze_tn_button.setText(QCoreApplication.translate(«Maim_window», u»\u0410\u043d\u0430\u0437\u0438\u0437 \u0442\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438», None))
+        self.label.setText(QCoreApplication.translate(«Maim_window», u»\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0442\u0435\u043a\u0441\u0442», None))
+        self.label_2.setText(QCoreApplication.translate(«Maim_window», u»\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442», None))
+        self.voice_input_button.setText(««)
+    # retranslateUi
